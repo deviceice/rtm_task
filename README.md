@@ -2,7 +2,7 @@
 
 Микросервисная система из двух сервисов и воркера для обработки задач через RabbitMQ.
 
-Два сервиса: 
+- Два сервиса: 
 
 1. Service A на FastAPI с задержкой 60с как в ТЗ.    Запуск через main.py
 
@@ -18,13 +18,13 @@
 Запуск для проверки
 
 1. В файле config.ini изменить настройки rabbitMQ
-
+```bash  
 [RABBITMQ]
 user = guest
 password = guest
 host = localhost
 port = 	5672
-
+```
 
 2. Service A - Service_A/main.py - на порту 8001
 
@@ -32,10 +32,10 @@ port = 	5672
 
 4. script - script/worker_task.py 
 
-если service_A запускаете на другом порту, в worker_task.py измените ссылку на верный порт 
-
+- Если service_A запускаете на другом порту, в worker_task.py измените ссылку на верный порт 
+```
 API_BASE_URL = "http://localhost:8001"  # URL FastAPI Server_A
-
+```
 
 
 
