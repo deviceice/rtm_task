@@ -42,7 +42,7 @@ async def configure_cpe(
     if not re.fullmatch(r"Ab12124", id, re.IGNORECASE):
         return ResponseModel(code=404, message="The requested equipment is not found")
 
-    # Эмуляция случайной ошибки сервера 10% шанс ТЗ
+    # Эмуляция случайной ошибки сервера 30% шанс ТЗ
     if random.random() < 0.3:
         return ResponseModel(code=500, message="Internal provisioning exception")
 
